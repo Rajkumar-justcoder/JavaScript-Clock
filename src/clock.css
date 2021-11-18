@@ -13,7 +13,7 @@ body{
     display:flex;
     height: 100vh;
     font-family: 'Audiowide', cursive;
-    font-size: 14px;
+    font-size: 60px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -26,28 +26,12 @@ body{
  }
 
  .sec {
-     width: 25px;
+    width: 107px;
     animation: blinker 1s ease infinite;
   }
   
   @keyframes blinker {
-    0% {
-      opacity: 1;
-    }
-    20%{
-        opacity: 0.3;
-    }
-    40%{
+    0%{
         opacity: 0;
-    }
-    60%{
-        opacity: 0;
-    }
-    90%{
-        opacity: .7;
-    }
-    100%
-    {
-        opacity: 1;
     }
   }
