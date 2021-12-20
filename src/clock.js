@@ -2,19 +2,26 @@ let hour;
 let minutes;
 let second;
 let date;
-let milisec;
+let month;
+let day;
 
 function clockfun() {
+
     const clock = new Date();
+    const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+    const months=["January", "February" ,"March" ,"April" ,"May" ,"June" ,"July" ,"August" , "September" , "October" ,"November" , "December"];
     hour = clock.getHours();
     minutes = clock.getMinutes();
     second = clock.getSeconds();
     date = clock.toLocaleDateString();
+    day = weekday[clock.getDay()];
+    month = months[clock.getMonth()];
+    date = day + ' ' + clock.getDate() + ' ' + month + ' ' + clock.getFullYear();
     // let usaTime = clock.toLocaleString("en-US", {timeZone: "UTC"});
     // console.log(usaTime);
     var session = "AM";
     if (hour == 0) {
-       session="AM"
+        session = "AM"
         hour = 12;
     }
     if (hour > 12) {
@@ -27,7 +34,8 @@ function clockfun() {
     document.querySelector('.hour').innerHTML = hour;
     document.querySelector('.min').innerHTML = minutes;
     document.querySelector('.sec').innerHTML = second;
-    document.querySelector('.date').innerHTML = date
+    document.querySelector('.date').innerHTML = date;
+
 }
 setInterval(clockfun, 1000);
 

@@ -5,31 +5,46 @@
 }
 body{
     background-color: rgb(0, 0, 0);
-    color: rgb(3 0 177);
+    color: white;
     color: linear-gradient(90deg, rgba(1,0,48,1) 0%, rgba(0,18,103,1) 100%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);
 
+}
+.margin{
+    margin: 0 14px
+}
+.width{
+    width: 107px  
 }
 .clock{
     display:flex;
     height: 100vh;
-    font-family: 'Audiowide', cursive;
-   font-size: 60px;
-   text-align: center;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
-   flex-flow: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-flow: column;
 }
 .first-half{
     display: inherit;
     flex-flow: row;
+    font-family: 'Noto Serif', serif;
 }
-.time{
+.hour-sh{
     box-shadow: 0px 0px 3px 3px blue;
+    margin: 0 14px;
+}
+.min-sh{
+    box-shadow: 0px 0px 3px 3px yellow
+}
+.sec-sh{
+    box-shadow: 0px 0px 3px 3px red;
 }
 .sec {
-   width: 107px;
    animation: blinker 1s ease infinite;
+ }
+ .date{
+     padding-top: 2%;
+    font-family: 'Josefin Sans', sans-serif;
  }
  
  @keyframes blinker {
