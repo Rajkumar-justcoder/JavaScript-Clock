@@ -2,6 +2,7 @@ let hour;
 let minutes;
 let second;
 let date;
+let milisec;
 
 function clockfun() {
     const clock = new Date();
@@ -13,7 +14,7 @@ function clockfun() {
     // console.log(usaTime);
     var session = "AM";
     if (hour == 0) {
-        s
+       session="AM"
         hour = 12;
     }
     if (hour > 12) {
@@ -23,10 +24,17 @@ function clockfun() {
     hour = (hour < 10) ? "0" + hour : hour;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     second = (second < 10) ? "0" + second : second;
-    var Clock = hour + ' : ' + minutes + ' : ';
-    document.querySelector('.time').innerHTML = Clock;
+    document.querySelector('.hour').innerHTML = hour;
+    document.querySelector('.min').innerHTML = minutes;
     document.querySelector('.sec').innerHTML = second;
     document.querySelector('.date').innerHTML = date
 }
 setInterval(clockfun, 1000);
 
+// function clockmili() {
+//     const mil=new Date();
+//     milisec=mil.getMilliseconds();
+//     document.querySelector('.msec').innerHTML=milisec
+//     console.log
+// }
+// setInterval(clockmili, 1);
