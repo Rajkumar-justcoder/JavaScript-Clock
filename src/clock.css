@@ -13,7 +13,7 @@ body{
     margin: 0 14px
 }
 .width{
-    width: 107px  
+    width: 100px  
 }
 .clock{
     display:flex;
@@ -31,7 +31,6 @@ body{
 }
 .hour-sh{
     box-shadow: 0px 0px 3px 3px blue;
-    margin: 0 14px;
 }
 .min-sh{
     box-shadow: 0px 0px 3px 3px yellow
@@ -57,7 +56,7 @@ body{
 .footercss{
   display: flex;
   justify-content: center;
-  padding: 6% 0;
+  padding: 5% 0;
   width: auto
 }
 .footerdiv{
