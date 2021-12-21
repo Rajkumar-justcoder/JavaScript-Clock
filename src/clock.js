@@ -56,7 +56,7 @@ setInterval(clockfun, 1000);
 //     })
 
 async function quotescall() {
-    await fetch('/src/quotes.json', {
+    await fetch('src/quotes.json', {
         method: "GET"
     }).then(response => response.json())
         .then(data => {
