@@ -35,6 +35,8 @@ body{
   display: inherit;
   flex-flow: row;
   font-size: 24px;
+  width: auto;
+  max-width: inherit;
   font-family: 'Noto Serif', serif;
 }
 .hour-sh{
