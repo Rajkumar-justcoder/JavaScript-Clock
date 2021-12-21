@@ -9,6 +9,10 @@ body{
     color: linear-gradient(90deg, rgba(1,0,48,1) 0%, rgba(0,18,103,1) 100%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);
 
 }
+.container{
+  display: flex;
+  justify-content: center;
+}
 .margin{
     margin: 0 14px
 }
@@ -16,18 +20,22 @@ body{
     width: 100px  
 }
 .clock{
-    display:flex;
-    height: 100vh;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-flow: column;
+  display:flex;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: column;
+  width: 100%;
+  max-width: 900px;
 }
 .first-half{
-    display: inherit;
-    flex-flow: row;
-    font-family: 'Noto Serif', serif;
+  padding: 15px;
+  display: inherit;
+  flex-flow: row;
+  font-size: 24px;
+  font-family: 'Noto Serif', serif;
 }
 .hour-sh{
     box-shadow: 0px 0px 3px 3px blue;
@@ -42,8 +50,13 @@ body{
    animation: blinker 1s ease infinite;
  }
  .date{
-     padding-top: 2%;
+    font-size: 23px;
+    padding: 2%;
     font-family: 'Josefin Sans', sans-serif;
+ }
+ #quotemain{
+   padding: 15px;
+   font-size: 25px;
  }
  
  @keyframes blinker {
@@ -56,13 +69,15 @@ body{
 .footercss{
   display: flex;
   justify-content: center;
-  padding: 5% 0;
+  padding: 3% 0;
   width: auto
 }
 .footerdiv{
   color: white;
-  border: double rgba(255,255,255,.25);
+  border: solid rgba(255,255,255,.25);
   border-width: 4px 0;
+  padding: auto;
+  border-radius: 10px;
 }
 h2{
   margin: 3% 0;

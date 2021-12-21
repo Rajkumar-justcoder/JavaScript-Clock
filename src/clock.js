@@ -8,8 +8,8 @@ let day;
 function clockfun() {
 
     const clock = new Date();
-    const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-    const months=["January", "February" ,"March" ,"April" ,"May" ,"June" ,"July" ,"August" , "September" , "October" ,"November" , "December"];
+    const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     hour = clock.getHours();
     minutes = clock.getMinutes();
     second = clock.getSeconds();
@@ -46,3 +46,27 @@ setInterval(clockfun, 1000);
 //     console.log
 // }
 // setInterval(clockmili, 1);
+
+    const random = Math.floor(Math.random() * 49 + 1);
+
+
+// fetch('/src/quotes.json')
+//     .then(res => {
+//         console.log(res)
+//     })
+
+async function quotescall() {
+    await fetch('/src/quotes.json', {
+        method: "GET"
+    }).then(response => response.json())
+        .then(data => {
+            // data.map((item) => {
+
+                let quotes = document.getElementById('quotemain')
+
+                 quotes.innerHTML = `<div class="quote-text">${data[random].h}</div>`;
+                //  console.log(data[random].h)
+            });
+        // })
+}
+quotescall();
