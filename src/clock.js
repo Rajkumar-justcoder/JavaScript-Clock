@@ -47,7 +47,7 @@ setInterval(clockfun, 1000);
 // }
 // setInterval(clockmili, 1);
 
-    const random = Math.floor(Math.random() * 49 + 1);
+    const random = Math.floor(Math.random() * 99 + 1);
 
 
 // fetch('/src/quotes.json')
@@ -61,7 +61,7 @@ async function quotescall() {
     }).then(response => response.json())
         .then(data => {
             // data.map((item) => {
-
+            // console.log(data);
                 let quotes = document.getElementById('quotemain')
 
                  quotes.innerHTML = `<div class="quote-text">${data[random].h}</div>`;
