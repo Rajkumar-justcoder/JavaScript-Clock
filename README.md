@@ -5,4 +5,3 @@
 - JavaScript clock With random Quotes
 
 - Build with HTML,CSS,Js & JSON.
-
