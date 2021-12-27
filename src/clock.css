@@ -81,7 +81,7 @@ body{
   border-radius: 10px;
 }
 h2{
-  margin: 3% 0;
+  margin: 10px;
 }
 
 a{
@@ -90,4 +90,12 @@ a{
 }
 a:hover{
   color: #00a96b;
+}
+@media screen and (max-width: 450px){
+    .first-half{
+        display: block;
+    }
+    .margin{
+        margin: 20px 14px;
+    }
 }
